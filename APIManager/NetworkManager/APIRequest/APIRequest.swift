@@ -45,7 +45,7 @@ class ApiRequest<ResponseType: Codable> {
     }
     
     //  Parameters
-    func parameters() -> [String: Any] {
+    func parameters() -> NSDictionary? {
        return [:]
     }
     

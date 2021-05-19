@@ -13,6 +13,7 @@ enum NetworkError: Error {
     case unknownError
 }
 
+
 final class NetworkClient {
     
     func callAPI<ResponseType>(request: ApiRequest<ResponseType>, completion: @escaping (Result<ResponseType, NetworkError>) -> Void) {
@@ -33,9 +34,8 @@ final class NetworkClient {
                     
                         // Decode Response into Model
                         do {
-                            let decoder = JSONDecoder()
-                            let resultModel = try decoder.decode(ResponseType.self, from: data)
-                            completion(.success(resultModel))
+                            let decodedModel = try JSONDecoder().decode(ResponseType.self, from: data)
+                            completion(.success(decodedModel))
                         } catch {
                             completion(.failure(.jsonDecodingError))
                         }
@@ -60,7 +60,9 @@ final class NetworkClient {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = apiRequest.httpMethod().rawValue
         urlRequest.setValue(apiRequest.contentType(), forHTTPHeaderField: "Content-Type")
-        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: apiRequest.parameters(), options: [])
+        if apiRequest.httpMethod() != .get {
+            urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: apiRequest.parameters()!, options: [])
+        }
         return urlRequest
     }
     
