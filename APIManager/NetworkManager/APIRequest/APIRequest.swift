@@ -7,7 +7,7 @@
 
 import Foundation
 
-//https://jsonplaceholder.typicode.com/posts
+
 
 enum HTTPMethod: String {
     case get = "GET"
@@ -24,15 +24,12 @@ class ApiRequest<ResponseType: Codable> {
         return .get
     }
     // 2. Base url
-    func baseURL() -> URL {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/") else {
-            fatalError("faled to get base url in APIRequest")
-            }
-        return url
+    func baseURLString() -> String {
+        return "https://jsonplaceholder.typicode.com/"
+         
     }
     
     // API Path
-    
     func apiPath() -> String {
         return ""
     }
@@ -48,7 +45,6 @@ class ApiRequest<ResponseType: Codable> {
     }
     
     //  Parameters
-    
     func parameters() -> [String: Any] {
        return [:]
     }
