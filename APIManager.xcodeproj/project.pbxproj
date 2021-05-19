@@ -17,6 +17,8 @@
 		97040411265584BB007F6109 /* APIManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97040410265584BB007F6109 /* APIManagerUITests.swift */; };
 		9704042726558655007F6109 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704042626558655007F6109 /* APIRequest.swift */; };
 		9704042826558655007F6109 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704042626558655007F6109 /* APIRequest.swift */; };
+		9704043026558FB6007F6109 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704042F26558FB6007F6109 /* Post.swift */; };
+		9704043126558FB6007F6109 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704042F26558FB6007F6109 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		97040410265584BB007F6109 /* APIManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerUITests.swift; sourceTree = "<group>"; };
 		97040412265584BB007F6109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9704042626558655007F6109 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		9704042F26558FB6007F6109 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 		97040421265585B7007F6109 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9704042F26558FB6007F6109 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +310,7 @@
 				970403EF265584BA007F6109 /* AppDelegate.swift in Sources */,
 				9704042726558655007F6109 /* APIRequest.swift in Sources */,
 				970403F1265584BA007F6109 /* SceneDelegate.swift in Sources */,
+				9704043026558FB6007F6109 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9704043126558FB6007F6109 /* Post.swift in Sources */,
 				9704042826558655007F6109 /* APIRequest.swift in Sources */,
 				97040406265584BB007F6109 /* APIManagerTests.swift in Sources */,
 			);
