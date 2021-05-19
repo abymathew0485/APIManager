@@ -15,6 +15,8 @@
 		970403FB265584BA007F6109 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970403F9265584BA007F6109 /* LaunchScreen.storyboard */; };
 		97040406265584BB007F6109 /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97040405265584BB007F6109 /* APIManagerTests.swift */; };
 		97040411265584BB007F6109 /* APIManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97040410265584BB007F6109 /* APIManagerUITests.swift */; };
+		9704042726558655007F6109 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704042626558655007F6109 /* APIRequest.swift */; };
+		9704042826558655007F6109 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704042626558655007F6109 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		9704040C265584BB007F6109 /* APIManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97040410265584BB007F6109 /* APIManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerUITests.swift; sourceTree = "<group>"; };
 		97040412265584BB007F6109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9704042626558655007F6109 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +102,11 @@
 		970403ED265584BA007F6109 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
-				970403EE265584BA007F6109 /* AppDelegate.swift */,
-				970403F0265584BA007F6109 /* SceneDelegate.swift */,
-				970403F2265584BA007F6109 /* ViewController.swift */,
-				970403F4265584BA007F6109 /* Main.storyboard */,
+				9704042526558636007F6109 /* NetworkManager */,
+				9704042426558628007F6109 /* Application Delegate */,
+				97040421265585B7007F6109 /* Model */,
+				97040422265585E5007F6109 /* View */,
+				97040423265585E8007F6109 /* Controllers */,
 				970403F7265584BA007F6109 /* Assets.xcassets */,
 				970403F9265584BA007F6109 /* LaunchScreen.storyboard */,
 				970403FC265584BA007F6109 /* Info.plist */,
@@ -126,6 +130,46 @@
 				97040412265584BB007F6109 /* Info.plist */,
 			);
 			path = APIManagerUITests;
+			sourceTree = "<group>";
+		};
+		97040421265585B7007F6109 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97040422265585E5007F6109 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				970403F4265584BA007F6109 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97040423265585E8007F6109 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				970403F2265584BA007F6109 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9704042426558628007F6109 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				970403EE265584BA007F6109 /* AppDelegate.swift */,
+				970403F0265584BA007F6109 /* SceneDelegate.swift */,
+			);
+			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		9704042526558636007F6109 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				9704042626558655007F6109 /* APIRequest.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +304,7 @@
 			files = (
 				970403F3265584BA007F6109 /* ViewController.swift in Sources */,
 				970403EF265584BA007F6109 /* AppDelegate.swift in Sources */,
+				9704042726558655007F6109 /* APIRequest.swift in Sources */,
 				970403F1265584BA007F6109 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9704042826558655007F6109 /* APIRequest.swift in Sources */,
 				97040406265584BB007F6109 /* APIManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
