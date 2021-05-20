@@ -12,21 +12,11 @@ class PostsServices {
     
     /// All Posts Fetching
     /// - Parameter completion: completion description
-    func fetchAllPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+    func fetchAllPosts(completion: @escaping (Result<[Post], NetworkError>) -> Void) {
         
         let postsAPIRequest = PostApiRequest() // apirequest for posts.
        
         // Calling api using NetworkClient.
-        NetworkClient().callAPI(request: postsAPIRequest) { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let posts):
-                    completion(.success(posts))
-                case .failure(let error):
-                    completion(.failure(error))
-                }
-            }
-            
-        }
+        NetworkClient().callAPI(request: postsAPIRequest, completion: completion)
     }
 }
