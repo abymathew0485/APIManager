@@ -7,6 +7,7 @@
 
 import Foundation
 
+//https://jsonplaceholder.typicode.com/comments
 class CommentsApiRequest : ApiRequestProtocol {
     
     var endpoint: String {

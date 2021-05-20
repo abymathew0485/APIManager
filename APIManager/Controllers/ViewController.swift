@@ -9,14 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var postsServies: PostsServices?
     var serviceLayer: ServiceLayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       postsServies = PostsServices()
-        serviceLayer = ServiceLayer() // Avoide this dependency using Interfaces abstraction.
+        serviceLayer = ServiceLayer(apiClient: NetworkClientNewVersion()) // dependency inversion using networkclient adding. So we can use anytype of apiclient which confirm ApiClientProtocol.
     }
         
     // MARK: - IBActions
@@ -32,10 +30,11 @@ class ViewController: UIViewController {
 
 extension ViewController {
     
+    // MARK: - Fetch all POSTS
     fileprivate func fetchPosts(){
         
         debugPrint("fetch posts starting....")
-        postsServies?.fetchAllPosts(completion: { (result) in
+        serviceLayer?.fetchAllPosts(completion: { (result) in
             
             switch result {
             case .success(let posts):
@@ -47,7 +46,7 @@ extension ViewController {
             }
         })
     }
-    
+    // MARK: - Fetch all COMMENTS
     fileprivate func fetchAllComments(){
         debugPrint("fetch comments starting....")
         serviceLayer?.fetchAllComments(completion: { (result) in

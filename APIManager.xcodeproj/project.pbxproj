@@ -23,8 +23,6 @@
 		9704043E26559187007F6109 /* PostAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704043C26559187007F6109 /* PostAPIRequest.swift */; };
 		9704044426559309007F6109 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704044326559309007F6109 /* NetworkClient.swift */; };
 		9704044526559309007F6109 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704044326559309007F6109 /* NetworkClient.swift */; };
-		970404542655A1BD007F6109 /* PostsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970404532655A1BD007F6109 /* PostsServices.swift */; };
-		970404552655A1BD007F6109 /* PostsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970404532655A1BD007F6109 /* PostsServices.swift */; };
 		97BB8138265612A5004ACA5E /* NetworkClient2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB8137265612A5004ACA5E /* NetworkClient2.swift */; };
 		97BB8139265612A5004ACA5E /* NetworkClient2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB8137265612A5004ACA5E /* NetworkClient2.swift */; };
 		97BB814426561DC6004ACA5E /* CommentsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB814326561DC6004ACA5E /* CommentsAPIRequest.swift */; };
@@ -73,7 +71,6 @@
 		9704042F26558FB6007F6109 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9704043C26559187007F6109 /* PostAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIRequest.swift; sourceTree = "<group>"; };
 		9704044326559309007F6109 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		970404532655A1BD007F6109 /* PostsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsServices.swift; sourceTree = "<group>"; };
 		97BB8137265612A5004ACA5E /* NetworkClient2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient2.swift; sourceTree = "<group>"; };
 		97BB814326561DC6004ACA5E /* CommentsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsAPIRequest.swift; sourceTree = "<group>"; };
 		97BB814C26561DFC004ACA5E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -198,6 +195,7 @@
 			children = (
 				970404522655A1A3007F6109 /* AppServices */,
 				97040442265592F6007F6109 /* NetworkClient */,
+				97BB815826562FBB004ACA5E /* API Protocols */,
 				9704043526559164007F6109 /* APIRequest */,
 			);
 			path = NetworkManager;
@@ -207,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				9704042626558655007F6109 /* APIRequest.swift */,
-				97BB815826562FBB004ACA5E /* API Protocols */,
 				9704043C26559187007F6109 /* PostAPIRequest.swift */,
 				97BB814326561DC6004ACA5E /* CommentsAPIRequest.swift */,
 			);
@@ -226,7 +223,6 @@
 		970404522655A1A3007F6109 /* AppServices */ = {
 			isa = PBXGroup;
 			children = (
-				970404532655A1BD007F6109 /* PostsServices.swift */,
 				97BB815226561F66004ACA5E /* ServiceLayer.swift */,
 			);
 			path = AppServices;
@@ -376,7 +372,6 @@
 				970403EF265584BA007F6109 /* AppDelegate.swift in Sources */,
 				97BB815A26562FDF004ACA5E /* ApiRequestProtocol.swift in Sources */,
 				9704043D26559187007F6109 /* PostAPIRequest.swift in Sources */,
-				970404542655A1BD007F6109 /* PostsServices.swift in Sources */,
 				9704042726558655007F6109 /* APIRequest.swift in Sources */,
 				97BB815326561F66004ACA5E /* ServiceLayer.swift in Sources */,
 				9704044426559309007F6109 /* NetworkClient.swift in Sources */,
@@ -391,7 +386,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9704043E26559187007F6109 /* PostAPIRequest.swift in Sources */,
-				970404552655A1BD007F6109 /* PostsServices.swift in Sources */,
 				97BB815B26562FDF004ACA5E /* ApiRequestProtocol.swift in Sources */,
 				9704044526559309007F6109 /* NetworkClient.swift in Sources */,
 				9704043126558FB6007F6109 /* Post.swift in Sources */,

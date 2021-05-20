@@ -7,6 +7,14 @@
 
 import Foundation
 
+enum HTTPMethod: String {
+    case get = "GET"
+    case post = "POST"
+    case delete = "DELETE"
+}
+
+typealias Parameters = [String : Any]
+typealias HTTPHeaders = [String : String]
 
 protocol ApiRequestProtocol {
     
@@ -37,17 +45,17 @@ extension ApiRequestProtocol {
     var endpoint: String {
         return ""
     }
-    var parameters: [String : Any] {
+    var parameters: Parameters {
         return [:]
     }
-    var httpHeaders: [String : String] {
+    var httpHeaders: HTTPHeaders {
         ["Content-Type" : "application/json"]
     }
 }
 
 
 /// ApiClientProtocol - for NetworkClient
-/// It's will act as an interface between network layer and application
+/// It will act as an interface between network layer and application
 protocol ApiClientProtocol {
     
     func callApi<ResponseType>(request: ApiRequestProtocol, completion: @escaping (Result<ResponseType, NetworkError>) -> Void) where ResponseType : Codable
