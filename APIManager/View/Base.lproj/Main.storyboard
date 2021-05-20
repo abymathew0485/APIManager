@@ -21,11 +21,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Start Fetch ">
+                                <state key="normal" title="Fetch All Posts">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="startFetchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDd-9Y-Ue1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJT-ec-TJp">
+                                <rect key="frame" x="115" y="528" width="209" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Fetch All Commets">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchCommetsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hUG-i4-Odg"/>
+                                    <action selector="startFetchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOW-Tm-y4b"/>
                                 </connections>
                             </button>
                         </subviews>

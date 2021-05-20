@@ -22,7 +22,7 @@ final class NetworkClient {
         let urlRequest = urlRequestFrom(apiRequest: request)
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, urlResponse, error) in
             
-            #warning("Should Remove this parsing logic to different Data parsing class")
+            #warning("It's better to move this parsing logic to different Data parsing class")
             guard error == nil else {
                 completion(.failure(.networkError))
                 return

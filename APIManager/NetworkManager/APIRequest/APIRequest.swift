@@ -9,11 +9,6 @@ import Foundation
 
 
 
-enum HTTPMethod: String {
-    case get = "GET"
-    case post = "POST"
-    case delete = "DELETE"
-}
 
 
 /// ApiRequest is the Base Class for all API Requests
@@ -55,3 +50,6 @@ class ApiRequest<ResponseType: Codable> {
     }
     
 }
+
+
+

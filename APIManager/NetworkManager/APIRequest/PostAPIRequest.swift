@@ -11,9 +11,9 @@ import Foundation
 //https://jsonplaceholder.typicode.com/posts
 
 /// POSTS API REQUEST
-class PostApiRequest: ApiRequest<[Post]> {
+class PostApiRequest: ApiRequestProtocol {
     
-    override func endpoint() -> String {
+    var endpoint: String {
         return "posts"
     }
     
