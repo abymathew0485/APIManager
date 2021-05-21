@@ -1,0 +1,28 @@
+
+{
+    "status" : "success",
+    "message" : "api call is success",
+    "data": [
+        { "userID": 1,
+            "id": 45,
+            "title": "Vishak",
+            "body": "iOS Develper"
+            
+        },
+        { "userID": 2,
+            "id": 35,
+            "title": "Aby",
+            "body": "iOS Develper"
+        },
+        { "userID": 3,
+            "id": 3,
+            "title": "Mani",
+            "body": "Flutter Developer"
+        },
+        { "userID": 4,
+            "id": 15,
+            "title": "Athul",
+            "body": "React Develper"
+        }
+    ]
+}

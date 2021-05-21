@@ -14,16 +14,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        serviceLayer = ServiceLayer(apiClient: NetworkClientNewVersion()) // dependency inversion using networkclient adding. So we can use anytype of apiclient which confirm ApiClientProtocol.
+        serviceLayer = ServiceLayer(apiClient: LocalDataClient()) // dependency inversion using networkclient adding. So we can use anytype of apiclient which confirm ApiClientProtocol.
     }
         
     // MARK: - IBActions
     @IBAction func startFetchAction(_ sender: Any) {
-        fetchPosts()
+        fetchLocalDataFromBundle()
+//        fetchPosts()
     }
     
     @IBAction func fetchCommetsAction(_ sender: Any) {
-        fetchAllComments()
+//        fetchAllComments()
     }
     
 }
@@ -61,4 +62,22 @@ extension ViewController {
             }
         })
     }
+    
+    // MARK: - Local Data Fetching
+    fileprivate func fetchLocalDataFromBundle(){
+        debugPrint("fetch data from Local Bundle file starting....")
+        let postsAPIRequest = PostApiRequest()
+        serviceLayer?.fetchData(apiRequest: postsAPIRequest, completion: { (result: Result<[Post],NetworkError>) in
+            
+            switch result {
+            case .success(let posts):
+                for post in posts {
+                    print("\n\n name : \(post.title ?? "no name") \n designation : \(post.body ?? "no designation")")
+                }
+            case .failure(let error):
+                print("error - \(error.localizedDescription)")
+            }
+        })
+    }
+    
 }
