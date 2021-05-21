@@ -36,4 +36,8 @@ extension ServiceLayer {
         self.apiClient?.callApi(request: commentAPIRequest, completion: completion)
     }
     
+    func fetchData<T: Codable>(apiRequest: ApiRequestProtocol , completion: @escaping (Result<[T], NetworkError>) -> Void) {
+        self.apiClient?.callApi(request: apiRequest, completion: completion)
+    }
+    
 }

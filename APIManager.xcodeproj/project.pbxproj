@@ -23,6 +23,11 @@
 		9704043E26559187007F6109 /* PostAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704043C26559187007F6109 /* PostAPIRequest.swift */; };
 		9704044426559309007F6109 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704044326559309007F6109 /* NetworkClient.swift */; };
 		9704044526559309007F6109 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704044326559309007F6109 /* NetworkClient.swift */; };
+		971B65D726577491009CAF0C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B65D626577491009CAF0C /* BaseModel.swift */; };
+		971B65DB26577497009CAF0C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B65D626577491009CAF0C /* BaseModel.swift */; };
+		971B65E026577513009CAF0C /* DummyData.json in Resources */ = {isa = PBXBuildFile; fileRef = 971B65DF26577513009CAF0C /* DummyData.json */; };
+		971B65E526577FE0009CAF0C /* LocalDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B65E426577FE0009CAF0C /* LocalDataClient.swift */; };
+		971B65E626577FE0009CAF0C /* LocalDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B65E426577FE0009CAF0C /* LocalDataClient.swift */; };
 		97BB8138265612A5004ACA5E /* NetworkClient2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB8137265612A5004ACA5E /* NetworkClient2.swift */; };
 		97BB8139265612A5004ACA5E /* NetworkClient2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB8137265612A5004ACA5E /* NetworkClient2.swift */; };
 		97BB814426561DC6004ACA5E /* CommentsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB814326561DC6004ACA5E /* CommentsAPIRequest.swift */; };
@@ -71,6 +76,9 @@
 		9704042F26558FB6007F6109 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9704043C26559187007F6109 /* PostAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIRequest.swift; sourceTree = "<group>"; };
 		9704044326559309007F6109 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		971B65D626577491009CAF0C /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		971B65DF26577513009CAF0C /* DummyData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DummyData.json; sourceTree = "<group>"; };
+		971B65E426577FE0009CAF0C /* LocalDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataClient.swift; sourceTree = "<group>"; };
 		97BB8137265612A5004ACA5E /* NetworkClient2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient2.swift; sourceTree = "<group>"; };
 		97BB814326561DC6004ACA5E /* CommentsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsAPIRequest.swift; sourceTree = "<group>"; };
 		97BB814C26561DFC004ACA5E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 				970403F7265584BA007F6109 /* Assets.xcassets */,
 				970403F9265584BA007F6109 /* LaunchScreen.storyboard */,
 				970403FC265584BA007F6109 /* Info.plist */,
+				971B65DF26577513009CAF0C /* DummyData.json */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -161,6 +170,7 @@
 			children = (
 				9704042F26558FB6007F6109 /* Post.swift */,
 				97BB814C26561DFC004ACA5E /* Comment.swift */,
+				971B65D626577491009CAF0C /* BaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +226,7 @@
 			children = (
 				9704044326559309007F6109 /* NetworkClient.swift */,
 				97BB8137265612A5004ACA5E /* NetworkClient2.swift */,
+				971B65E426577FE0009CAF0C /* LocalDataClient.swift */,
 			);
 			path = NetworkClient;
 			sourceTree = "<group>";
@@ -339,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971B65E026577513009CAF0C /* DummyData.json in Resources */,
 				970403FB265584BA007F6109 /* LaunchScreen.storyboard in Resources */,
 				970403F8265584BA007F6109 /* Assets.xcassets in Resources */,
 				970403F6265584BA007F6109 /* Main.storyboard in Resources */,
@@ -369,6 +381,7 @@
 				970403F3265584BA007F6109 /* ViewController.swift in Sources */,
 				97BB814426561DC6004ACA5E /* CommentsAPIRequest.swift in Sources */,
 				97BB8138265612A5004ACA5E /* NetworkClient2.swift in Sources */,
+				971B65D726577491009CAF0C /* BaseModel.swift in Sources */,
 				970403EF265584BA007F6109 /* AppDelegate.swift in Sources */,
 				97BB815A26562FDF004ACA5E /* ApiRequestProtocol.swift in Sources */,
 				9704043D26559187007F6109 /* PostAPIRequest.swift in Sources */,
@@ -377,6 +390,7 @@
 				9704044426559309007F6109 /* NetworkClient.swift in Sources */,
 				970403F1265584BA007F6109 /* SceneDelegate.swift in Sources */,
 				97BB814D26561DFC004ACA5E /* Comment.swift in Sources */,
+				971B65E526577FE0009CAF0C /* LocalDataClient.swift in Sources */,
 				9704043026558FB6007F6109 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,11 +401,13 @@
 			files = (
 				9704043E26559187007F6109 /* PostAPIRequest.swift in Sources */,
 				97BB815B26562FDF004ACA5E /* ApiRequestProtocol.swift in Sources */,
+				971B65DB26577497009CAF0C /* BaseModel.swift in Sources */,
 				9704044526559309007F6109 /* NetworkClient.swift in Sources */,
 				9704043126558FB6007F6109 /* Post.swift in Sources */,
 				9704042826558655007F6109 /* APIRequest.swift in Sources */,
 				97BB815426561F66004ACA5E /* ServiceLayer.swift in Sources */,
 				97BB8139265612A5004ACA5E /* NetworkClient2.swift in Sources */,
+				971B65E626577FE0009CAF0C /* LocalDataClient.swift in Sources */,
 				97040406265584BB007F6109 /* APIManagerTests.swift in Sources */,
 				97BB814E26561DFC004ACA5E /* Comment.swift in Sources */,
 				97BB814526561DC6004ACA5E /* CommentsAPIRequest.swift in Sources */,
