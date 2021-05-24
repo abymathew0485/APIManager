@@ -8,10 +8,14 @@
 import Foundation
 
 //https://jsonplaceholder.typicode.com/comments
-class CommentsApiRequest : ApiRequestProtocol {
-    
-    var endpoint: String {
+class CommentsApiRequest : APIRequest {
+
+    var apiEndpoint: String {
         return "comments"
+    }
+    
+    var apiType: HTTPMethod {
+        return .get
     }
     
 }

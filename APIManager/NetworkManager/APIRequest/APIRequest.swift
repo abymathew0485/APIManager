@@ -7,48 +7,58 @@
 
 import Foundation
 
-
-
-
-
-/// ApiRequest is the Base Class for all API Requests
-class ApiRequest<ResponseType: Codable> {
+// Base protocol for all API requests
+protocol APIRequest {
     
-    // 1 HTTPMethod
-    func httpMethod() -> HTTPMethod {
-        return .get
-    }
-    // 2. Base url
-    func baseURLString() -> String {
+    var apiBaseUrl: String              { get }
+    var apiType: HTTPMethod             { get }
+    var apiPath: String                 { get }
+    var apiVersion: String              { get }
+    var apiEndpoint: String             { get }
+    var apiParams: Parameters           { get }
+    var apiHeaders: HTTPHeaders         { get }
+    
+    func loadData<ResponseType: Codable>(completion: @escaping(Result<ResponseType, NetworkError>) -> Void)
+    
+
+}
+
+extension APIRequest {
+    
+    var apiBaseUrl: String {
         return "https://jsonplaceholder.typicode.com/"
-         
     }
     
-    // API Path
-    func apiPath() -> String {
+    var apiPath: String {
         return ""
     }
     
-    // API Version
-    func apiVersion() -> String {
+    var apiType: HTTPMethod {
+        return .post
+    }
+    
+    var apiAbsoluteUrl: String {
+        return "\(apiBaseUrl)\(apiPath)\(apiVersion)\(apiEndpoint)"
+    }
+    
+    var apiHeaders: HTTPHeaders {
+        return ["Content-Type": "application/json"]
+    }
+    
+    var apiVersion: String  {
+        return ""
+    }
+    var apiEndpoint: String  {
         return ""
     }
     
-    //  Endpoint
-    func endpoint() -> String {
-        return ""
+    var apiParams: Parameters {
+        return nil
     }
     
-    //  Parameters
-    func parameters() -> NSDictionary? {
-       return [:]
+    func loadData<ResponseType: Codable>(completion: @escaping(Result<ResponseType, NetworkError>) -> Void) {
+        NetworkClient().callApi(for: self, completion: completion)
     }
-    
-    //  ContentType
-    func contentType() -> String {
-        return "application/json"
-    }
-    
 }
 
 
