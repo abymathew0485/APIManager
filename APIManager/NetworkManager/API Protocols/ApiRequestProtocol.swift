@@ -13,7 +13,7 @@ enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
-typealias Parameters = [String : Any]
+typealias Parameters = [String : Any]?
 typealias HTTPHeaders = [String : String]
 
 protocol ApiRequestProtocol {

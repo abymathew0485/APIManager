@@ -34,10 +34,10 @@
 		97BB814526561DC6004ACA5E /* CommentsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB814326561DC6004ACA5E /* CommentsAPIRequest.swift */; };
 		97BB814D26561DFC004ACA5E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB814C26561DFC004ACA5E /* Comment.swift */; };
 		97BB814E26561DFC004ACA5E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB814C26561DFC004ACA5E /* Comment.swift */; };
-		97BB815326561F66004ACA5E /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB815226561F66004ACA5E /* ServiceLayer.swift */; };
-		97BB815426561F66004ACA5E /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB815226561F66004ACA5E /* ServiceLayer.swift */; };
 		97BB815A26562FDF004ACA5E /* ApiRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB815926562FDF004ACA5E /* ApiRequestProtocol.swift */; };
 		97BB815B26562FDF004ACA5E /* ApiRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BB815926562FDF004ACA5E /* ApiRequestProtocol.swift */; };
+		FE7A7151265BE04F0024177B /* ServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A7150265BE04F0024177B /* ServiceAdapter.swift */; };
+		FE7A7157265BE0870024177B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A7156265BE0870024177B /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,8 +82,9 @@
 		97BB8137265612A5004ACA5E /* NetworkClient2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient2.swift; sourceTree = "<group>"; };
 		97BB814326561DC6004ACA5E /* CommentsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsAPIRequest.swift; sourceTree = "<group>"; };
 		97BB814C26561DFC004ACA5E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		97BB815226561F66004ACA5E /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		97BB815926562FDF004ACA5E /* ApiRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestProtocol.swift; sourceTree = "<group>"; };
+		FE7A7150265BE04F0024177B /* ServiceAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAdapter.swift; sourceTree = "<group>"; };
+		FE7A7156265BE0870024177B /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +204,8 @@
 		9704042526558636007F6109 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				970404522655A1A3007F6109 /* AppServices */,
+				FE7A7155265BE0710024177B /* ServiceProtocol */,
+				970404522655A1A3007F6109 /* Adapter */,
 				97040442265592F6007F6109 /* NetworkClient */,
 				97BB815826562FBB004ACA5E /* API Protocols */,
 				9704043526559164007F6109 /* APIRequest */,
@@ -231,12 +233,12 @@
 			path = NetworkClient;
 			sourceTree = "<group>";
 		};
-		970404522655A1A3007F6109 /* AppServices */ = {
+		970404522655A1A3007F6109 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
-				97BB815226561F66004ACA5E /* ServiceLayer.swift */,
+				FE7A7150265BE04F0024177B /* ServiceAdapter.swift */,
 			);
-			path = AppServices;
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 		97BB815826562FBB004ACA5E /* API Protocols */ = {
@@ -245,6 +247,14 @@
 				97BB815926562FDF004ACA5E /* ApiRequestProtocol.swift */,
 			);
 			path = "API Protocols";
+			sourceTree = "<group>";
+		};
+		FE7A7155265BE0710024177B /* ServiceProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				FE7A7156265BE0870024177B /* ApiService.swift */,
+			);
+			path = ServiceProtocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,14 +391,15 @@
 				970403F3265584BA007F6109 /* ViewController.swift in Sources */,
 				97BB814426561DC6004ACA5E /* CommentsAPIRequest.swift in Sources */,
 				97BB8138265612A5004ACA5E /* NetworkClient2.swift in Sources */,
+				FE7A7151265BE04F0024177B /* ServiceAdapter.swift in Sources */,
 				971B65D726577491009CAF0C /* BaseModel.swift in Sources */,
 				970403EF265584BA007F6109 /* AppDelegate.swift in Sources */,
 				97BB815A26562FDF004ACA5E /* ApiRequestProtocol.swift in Sources */,
 				9704043D26559187007F6109 /* PostAPIRequest.swift in Sources */,
 				9704042726558655007F6109 /* APIRequest.swift in Sources */,
-				97BB815326561F66004ACA5E /* ServiceLayer.swift in Sources */,
 				9704044426559309007F6109 /* NetworkClient.swift in Sources */,
 				970403F1265584BA007F6109 /* SceneDelegate.swift in Sources */,
+				FE7A7157265BE0870024177B /* ApiService.swift in Sources */,
 				97BB814D26561DFC004ACA5E /* Comment.swift in Sources */,
 				971B65E526577FE0009CAF0C /* LocalDataClient.swift in Sources */,
 				9704043026558FB6007F6109 /* Post.swift in Sources */,
@@ -405,7 +416,6 @@
 				9704044526559309007F6109 /* NetworkClient.swift in Sources */,
 				9704043126558FB6007F6109 /* Post.swift in Sources */,
 				9704042826558655007F6109 /* APIRequest.swift in Sources */,
-				97BB815426561F66004ACA5E /* ServiceLayer.swift in Sources */,
 				97BB8139265612A5004ACA5E /* NetworkClient2.swift in Sources */,
 				971B65E626577FE0009CAF0C /* LocalDataClient.swift in Sources */,
 				97040406265584BB007F6109 /* APIManagerTests.swift in Sources */,

@@ -16,10 +16,10 @@ enum NetworkError: Error {
 
 final class NetworkClient {
     
-    func callAPI<ResponseType>(request: ApiRequest<ResponseType>, completion: @escaping (Result<ResponseType, NetworkError>) -> Void) {
+    func callApi<ResponseType: Codable>(for request: APIRequest, completion: @escaping(Result<ResponseType, NetworkError>) -> ()) {
         
         // API Calling using URLSession Task
-        let urlRequest = urlRequestFrom(apiRequest: request)
+        let urlRequest = makeRequest(for: request)
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, urlResponse, error) in
             
             #warning("It's better to move this parsing logic to different Data parsing class")
@@ -50,18 +50,18 @@ final class NetworkClient {
         
     }
     
-    private func urlRequestFrom<ResponseType>(apiRequest: ApiRequest<ResponseType>) -> URLRequest {
-        
-        // Creating a from cleint ApiRequest URLRequest
-        let urlFinalString: String = apiRequest.baseURLString() + apiRequest.apiPath() + apiRequest.apiVersion() + apiRequest.endpoint()
-        guard let url = URL(string: urlFinalString) else {
-            fatalError("\n Failed to create URL from urlFinalString.")
+    /// Creating URLRequest
+    /// - Parameter request: from an ApiRequest
+    /// - Returns: a request suffice to maka an api call
+    private func makeRequest(for request: APIRequest) -> URLRequest {
+        guard let url = URL(string: request.apiAbsoluteUrl) else {
+            fatalError("\n Failed to create URL.")
         }
         var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = apiRequest.httpMethod().rawValue
-        urlRequest.setValue(apiRequest.contentType(), forHTTPHeaderField: "Content-Type")
-        if apiRequest.httpMethod() != .get {
-            urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: apiRequest.parameters()!, options: [])
+        urlRequest.httpMethod          = request.apiType.rawValue
+        urlRequest.allHTTPHeaderFields = request.apiHeaders
+        if let params = request.apiParams {
+            urlRequest.httpBody = try? JSONSerialization.data(withJSONObject:params, options: [])
         }
         return urlRequest
     }

@@ -11,10 +11,14 @@ import Foundation
 //https://jsonplaceholder.typicode.com/posts
 
 /// POSTS API REQUEST
-class PostApiRequest: ApiRequestProtocol {
+class PostApiRequest: APIRequest {
     
-    var endpoint: String {
+    var apiEndpoint: String {
         return "posts"
+    }
+    
+    var apiType: HTTPMethod {
+        return .get
     }
     
 }
